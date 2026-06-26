@@ -1,11 +1,10 @@
 class Solution {
+    public static Set<Character> v=new HashSet<>();
 
     public static int isV(String s){
-        String v="aeiouAEIOU";
         int c=0;
-        char[] x=s.toCharArray();
-        for(char b:x){
-            if (v.contains(b+"")){
+        for(int i=0;i<s.length();i++){
+            if (v.contains(s.charAt(i))){
                 c++;
             }
         }
@@ -15,7 +14,6 @@ class Solution {
 
     public int maxVowels(String s, int k) {
         int m=0;
-        Set<Character> v=new HashSet<>();
         v.add('a');
         v.add('e');
         v.add('i');
