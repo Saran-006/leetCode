@@ -7,20 +7,16 @@ class Solution:
             if k>0:index=i+1
             else:index=i-1
             s=0
-            temp=[]
             while x<abs(k):
                 if index<0:
                     index+=n
                 if index==n:index%=n
 
                 s+=code[index]
-                temp.append(code[index])
                 x+=1
                 if k>0:
                     index+=1
                 else:
                     index-=1
-            print(temp)
             res.append(s)
-        print(res)
         return res
