@@ -1,5 +1,6 @@
 class Solution {
     public int numOfSubarrays(int[] arr, int k, int threshold) {
+        System.gc();
         int c=0;
         int s=0;
         for(int i=0;i<k;i++){
