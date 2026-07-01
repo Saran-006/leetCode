@@ -1,5 +1,6 @@
 class Solution:
     def decrypt(self, code: List[int], k: int) -> List[int]:
+        # if len(code)>50:return
         res=[]
         n=len(code)
         for i in range(n):
