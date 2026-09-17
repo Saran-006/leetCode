@@ -13,5 +13,6 @@ class Solution {
                 start = i + 1; // and update the stating gas station
             }
         }
+        // System.gc();
         return (total_surplus < 0) ? -1 : start;}
 }
