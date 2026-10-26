@@ -1,7 +1,7 @@
 class Solution {
 
     public String rle(String s){
-        String r="";
+        StringBuilder r=new StringBuilder();
         int c=0;
         char prev=s.charAt(0);
 
@@ -10,15 +10,17 @@ class Solution {
                 c++;
             }
             else{
-                r=r+c+prev;
+                r.append(c);
+                r.append(prev);
                 c=1;
                 prev=s.charAt(i);
             }
         }
         
-        r=r+c+prev;
+        r.append(c);
+        r.append(prev);
 
-        return r;
+        return r.toString();
     }
 
     public String countAndSay(int n) {
